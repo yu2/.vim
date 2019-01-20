@@ -23,7 +23,8 @@ colo monokai
 colo gruvbox
 let g:gruvbox_contrast_dark = 'soft'
 "let g:gruvbox_contrast_light= 'hard'
-
+"let g:solarized_termcolors=256
+"colo solarized
 ":set expandtab
 :set shiftwidth=2
 :set autoindent
@@ -48,6 +49,10 @@ set backspace=indent,eol,start
 "inoremap [; [<CR>];<C-c>O
 "inoremap [, [<CR>],<C-c>O
 
+" Move lines
+noremap <A-j> :m+<CR>==
+noremap <A-k> :m-2<CR>==
+
 " Show syntax highlighting groups for word under cursor
 nmap <C-S-P> :call <SID>SynStack()<CR>
 function! <SID>SynStack()
@@ -56,3 +61,5 @@ function! <SID>SynStack()
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+
+noremap gf :e <cfile><CR>
