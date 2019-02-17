@@ -19,6 +19,17 @@ syntax on
 "set background=light
 "let g:seoul256_srgb = 1
 
+let g:ale_fixers = {
+\	'javascript': ['eslint']
+\}
+let g:ale_lint_on_text_changed = 'normal'
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 1
+
+"Goyo
+let g:goyo_width = '90'
+let g:goyo_height = '95%'
+
 colo monokai
 colo gruvbox
 let g:gruvbox_contrast_dark = 'soft'
@@ -62,4 +73,17 @@ function! <SID>SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
-noremap gf :e <cfile><CR>
+noremap gf :w<CR>:e <cfile><CR>
+
+" Toggle sign column
+nnoremap <Leader>t :call ToggleSignColumn()<CR>
+
+function! ToggleSignColumn()
+	if !exists("b:signcolumn_on") || b:signcolumn_on
+		set signcolumn=no
+		let b:signcolumn_on=0
+	else
+		set signcolumn=yes
+		let b:signcolumn_on=1
+	endif
+endfunction
