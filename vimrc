@@ -87,3 +87,11 @@ function! ToggleSignColumn()
 		let b:signcolumn_on=1
 	endif
 endfunction
+
+
+" Toggle search highlight
+:noremap <Leader>h :set hlsearch! hlsearch?<CR>
+
+" Scroll viewport two lines at a time
+nnoremap <C-e> 2<C-e>
+nnoremap <C-y> 2<C-y>
