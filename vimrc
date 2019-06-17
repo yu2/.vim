@@ -1,6 +1,7 @@
 syntax on
 
 set encoding=utf8
+set fileencoding=utf8
 
 "if has('gui_running')
 "	set guifont=Consolas:h10:b:cANSI:qDRAFT
