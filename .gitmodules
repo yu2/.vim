@@ -1,3 +1,0 @@
-[submodule "pack/foo/opt/vim-javascript"]
-	path = pack/foo/opt/vim-javascript
-	url = https://github.com/pangloss/vim-javascript.git
