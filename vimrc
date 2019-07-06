@@ -29,6 +29,9 @@ let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_save = 1
 
+"Emmet
+let g:user_emmet_leader_key='<C-Z>'
+
 "Goyo
 let g:goyo_width = '90'
 let g:goyo_height = '95%'
