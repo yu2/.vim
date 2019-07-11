@@ -4,3 +4,6 @@
 [submodule "pack/foo/start/vim-css3-syntax"]
 	path = pack/foo/start/vim-css3-syntax
 	url = https://github.com/hail2u/vim-css3-syntax.git
+[submodule "pack/foo/opt/emmet-vim"]
+	path = pack/foo/opt/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
